@@ -1,0 +1,378 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-hamburguesa {
+    display: none !important;
+}
+
+.logo {
+    width: 220px;
+    height: 80px;
+    margin-top: 10px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.price,a,h1,h2,.btn-custom {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.menu-items{
+    display: flex;
+    gap: 30px;
+}
+
+.icons-menu {
+    display: flex;
+    gap:20px;
+}
+
+.toggleButton{
+    border:none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+
+}
+
+/* <----------------------------------------------Hero------------------------------------------------------------------>*/
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(153, 153, 153, 0.3),rgba(119, 119, 119, 0.3)),url('./images/hero.jpg');
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+}
+
+h1 {
+    width: 35%;
+}
+
+.hero-custom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+
+
+/* <---------------------------------Botones--------------------------------->*/
+.btn-custom {
+    width: 200px;
+    height: 43px;
+    border:none;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: black;
+    color:white;
+    text-transform: uppercase; 
+}
+
+.btn-custom:hover {                 /*Estilizo el boton para cuando pase el mouse*/
+    background-color: white;    
+    color: black;
+}
+
+/*<----------------------------------------------Seccion "informativa" (la seccion que esta debajo del hero) -------------------->*/
+.seccion-informativa {
+    
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:auto ;
+    padding: 20px;
+    gap: 20px;
+}
+
+.seccion-informativa a {
+    color: rgb(1, 166, 255);
+}
+
+/* galeria */
+.galeria {               
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    gap: 30px;
+}
+
+img {
+    width:320px;                /*364*/
+    height: 250px;                  /*300*/
+    margin-bottom: 12px;
+}
+
+h2, p {
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/*<--------------------------------------------Seccion contacto---------------------------------->*/
+.seccion-contacto {
+    background-color: #E6E0D4;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.form-control {
+    background-color: transparent;
+    border: 1px solid #735646;
+    border-radius: 20px;
+}
+
+.form-control::placeholder {
+    color: #121212;
+}
+
+.seccion-galeria {
+    padding: 20px;
+}
+
+/*<--------------------------------------------Footer----------------------------------------->*/
+.caja-superior{
+    display: flex;
+    justify-content: space-between;
+}
+
+.items-footer {
+    display: flex;
+    gap: 10px;
+}
+
+
+.items-footer a, .caja-inferior p {
+    color: white;
+}
+
+.caja-inferior {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid white;
+    padding: 10px;
+    align-items: center;
+}
+
+footer {
+      background-color: #121212;
+      padding: 20px;
+}
+
+.facebook-icon, .telegram-icon, .instagram-icon {
+    color: white;
+    margin-left: 10px;
+}
+.logo-footer {
+    width: 290px;
+    height: 35px;
+}
+
+
+/*media-queries*/
+
+@media (min-width: 480px) and (max-width:768px) {
+    nav,.menu-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-items {
+        align-items: center;
+    }
+    .container {
+        width: 100%;    /*Redefino el width que trae por defecto la clase container de bootstrap*/
+    }
+    .logo-footer, .social-media-icons {
+        display: none;
+    }
+    
+    .items-footer , .caja-superior{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .caja-inferior p, .items-footer a {
+        font-size: 13px;
+    }
+   
+    .galeria {
+        display: column;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+    .icons-menu {
+        display: none;
+    }
+    nav {
+        flex-direction: column;
+        
+    }  
+    .btn-custom {
+        width: 120px;
+        height: 37px;
+        font-size: 10px;
+        text-align: center;
+    }
+    a {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1020px){
+    .container {
+       margin: auto !important;
+       width: 100% !important;
+    }
+
+    .menu-items {
+        font-size: 13px;
+    }
+    
+    .logo {
+        width: 195px;
+        height: 70px;
+    }
+    .icons-menu{
+        display: none;
+    }
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-footer {
+        display: none;
+    }
+    .items-footer {
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+    .btn-custom {
+        width: 150px;
+        height: 35px;
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+/* --------------------------Agrego los estilos del modo oscuro--------------------- */
+
+
+.modo-oscuro, .modo-oscuro .seccion-informativa{
+    color: white;
+    background-color: black;
+}
+
+.modo-oscuro .form-control::placeholder {   /*cuando el elemento que esta arriba del form-control tenga aplicada la propiedad del modo oscuro, entonces le cambio el color al placeholder*/
+    color:white;
+}
+
+.modo-oscuro .btn-custom {  /* cuando el elemento que esta arriba del boton tenga aplicada la propiedad del modo oscuro, cabmio el color del boton*/
+    background-color: white;
+    color:black
+}
+
+.modo-oscuro .btn-custom:hover {
+    background-color: darkgrey;
+}
+
+.modo-oscuro a {
+    color:white;
+}
+
+.modo-oscuro .seccion-galeria {
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+/* ------------------------------------fin de estilos de modo oscuro ---------------------- */
+
+
+
+
+
+
+/*--------------------------------------acciones de scroll-----------------------------------*/
+
+.section {
+    opacity: 0; /*los oculto*/
+    transform: translateY(100px);
+    transition: 0.5s ease, transform 0.5s ease;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -------------------------------fin de acciones de scroll-----------------------------------*/
+
+
+
+
+/* -----------------------------Texto "leer mas"------------------------------------- */
+.text-read-more {
+    display: none;  /*oculto el texto*/
+}
+
+/* propiedades al boton de "leer mas"  */
+.btn-read-more {
+    color: rgba(104, 99, 168, 0.536) !important;
+}
+
+/* propiedades al pasar el mouse al boton de "leer mas" */
+.btn-read-more:hover{
+    color: rgb(104, 99, 168) !important;
+}
+
+/* propiedades al boton de "leer mas" en modo oscuro  */
+.modo-oscuro .btn-read-more {
+    color:rgb(165, 162, 209) !important;
+}
+
+/* propiedades al pasar el mouse al boton de "leer mas" en modo oscuro */
+.modo-oscuro .btn-read-more:hover {
+    color:rgba(123, 119, 185, 0.879) !important;
+}
